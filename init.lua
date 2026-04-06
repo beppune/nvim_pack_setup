@@ -4,6 +4,11 @@ vim.o.softtabstop = 4
 
 vim.o.number = true
 
-require 'modules'
+require 'mappings'
 
-mod 'mappings'
+require 'lualine'.setup({
+    options = {
+	theme = 'powerline'
+    }
+})
+
