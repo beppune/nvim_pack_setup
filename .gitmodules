@@ -13,3 +13,9 @@
 [submodule "pack/nvim/start/blink.cmp"]
 	path = pack/nvim/start/blink.cmp
 	url = https://github.com/saghen/blink.cmp.git
+[submodule "pack/nvim/start/prenary"]
+	path = pack/nvim/start/prenary
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "pack/nvim/start/telescope"]
+	path = pack/nvim/start/telescope
+	url = https://github.com/nvim-telescope/telescope.nvim.git

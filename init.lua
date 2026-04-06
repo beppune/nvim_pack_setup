@@ -47,3 +47,14 @@ require 'blink.cmp'.setup({
     keymap = { preset = 'super-tab' }
 })
 
+vim.keymap.set('n', '<leader>ff', function()
+    require 'telescope.builtin'.find_files()
+end, { desc = 'Telescope find files' })
+
+vim.keymap.set('n', '<leader>fb', function()
+    require 'telescope.builtin'.buffers()
+end, { desc = 'Telescope buffers' })
+
+vim.keymap.set('n', '<leader>fh', function()
+    require 'telescope.builtin'.help_tags()
+end, { desc = 'Telescope help_tags' })
