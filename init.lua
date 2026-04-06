@@ -12,6 +12,16 @@ require 'lualine'.setup({
     }
 })
 
-vim.lsp.config('lua_ls', {})
+vim.lsp.config('lua_ls', {
+    on_attach = function(_, bufnr)
+	vim.keymap.set( 'n', '<Leader>d', function()
+	    vim.diagnostic.goto_next()
+	end, { buffer = bufnr })
+
+	vim.keymap.set( 'n', '<Leader>s', function()
+	    vim.diagnostic.goto_prev()
+	end, { buffer = bufnr })
+    end
+})
 vim.lsp.enable('lua_ls')
 
