@@ -1,3 +1,6 @@
 [submodule "pack/nvim/start/lualine"]
 	path = pack/nvim/start/lualine
 	url = https://github.com/nvim-lualine/lualine.nvim.git
+[submodule "pack/nvim/start/lspconfig"]
+	path = pack/nvim/start/lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
