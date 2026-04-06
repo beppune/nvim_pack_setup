@@ -4,6 +4,9 @@ vim.o.softtabstop = 4
 
 vim.o.number = true
 
+vim.o.background = "dark"
+vim.cmd.colorscheme "duskfox"
+
 require 'mappings'
 
 require 'lualine'.setup({

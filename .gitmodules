@@ -19,3 +19,6 @@
 [submodule "pack/nvim/start/telescope"]
 	path = pack/nvim/start/telescope
 	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "pack/colorschemes/start/nightfox"]
+	path = pack/colorschemes/start/nightfox
+	url = https://github.com/EdenEast/nightfox.nvim.git
