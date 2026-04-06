@@ -7,3 +7,9 @@
 [submodule "pack/nvim/start/luapad"]
 	path = pack/nvim/start/luapad
 	url = https://github.com/rafcamlet/nvim-luapad.git
+[submodule "pack/nvim/start/luasnip"]
+	path = pack/nvim/start/luasnip
+	url = https://github.com/L3MON4D3/LuaSnip.git
+[submodule "pack/nvim/start/blink.cmp"]
+	path = pack/nvim/start/blink.cmp
+	url = https://github.com/saghen/blink.cmp.git

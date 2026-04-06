@@ -39,3 +39,11 @@ vim.lsp.config('lua_ls', {
 })
 vim.lsp.enable('lua_ls')
 
+require 'blink.cmp'.setup({
+    fuzzy = {
+	implementation = 'lua'
+    },
+    snippets = { preset = 'luasnip' },
+    keymap = { preset = 'super-tab' }
+})
+
