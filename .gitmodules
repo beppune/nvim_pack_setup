@@ -4,3 +4,6 @@
 [submodule "pack/nvim/start/lspconfig"]
 	path = pack/nvim/start/lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "pack/nvim/start/luapad"]
+	path = pack/nvim/start/luapad
+	url = https://github.com/rafcamlet/nvim-luapad.git
