@@ -3,4 +3,8 @@
 
 ### Lua Language Server
 
-On Windows: `winget install --id LuaLS.lua-language-server`
+Windows: `winget install --id LuaLS.lua-language-server`
+
+## Tree Sitter Cli
+
+Windows: `winget install --id tree-sitter.tree-sitter-cli`
