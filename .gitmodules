@@ -22,3 +22,6 @@
 [submodule "pack/colorschemes/start/nightfox"]
 	path = pack/colorschemes/start/nightfox
 	url = https://github.com/EdenEast/nightfox.nvim.git
+[submodule "pack/nvim/start/nvim-treesitter-textobjects"]
+	path = pack/nvim/start/nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git

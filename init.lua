@@ -66,3 +66,10 @@ end, { desc = 'Telescope help_tags' })
 
 -- Treesitter
 
+vim.keymap.set({ "n" }, "]m", function()
+    require("nvim-treesitter-textobjects.move").goto_next_start("@function_call", "textobjects")
+end)
+
+vim.keymap.set({ "n" }, "[m", function()
+    require("nvim-treesitter-textobjects.move").goto_previous_start("@function_call", "textobjects")
+end)
