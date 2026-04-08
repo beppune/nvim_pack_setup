@@ -64,6 +64,10 @@ vim.keymap.set('n', '<leader>fh', function()
     require 'telescope.builtin'.help_tags()
 end, { desc = 'Telescope help_tags' })
 
+
+vim.keymap.set('n', '<leader>fc', function()
+    require 'telescope.builtin'.commands()
+end, { desc = 'Telescope commands' })
 -- Treesitter
 
 vim.keymap.set({ "n" }, "]m", function()
