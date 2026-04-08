@@ -8,3 +8,5 @@ vim.keymap.set( 'n', '<Leader>o', '<C-W>o', { desc = 'myo' } )
 vim.keymap.set( 'n', '<Leader>c', '<C-W>c', { desc = 'myc' } )
 vim.keymap.set( 'n', '<Leader>v', '<C-W>v', { desc = 'myv' } )
 
+vim.keymap.set( 'n', '<Leader>w', '<C-W>w', { desc = 'myv' } )
+

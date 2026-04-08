@@ -7,6 +7,8 @@ vim.o.number = true
 vim.o.background = "dark"
 vim.cmd.colorscheme "duskfox"
 
+vim.o.cursorline = true
+
 require 'mappings'
 
 require 'lualine'.setup({
@@ -61,3 +63,6 @@ end, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', function()
     require 'telescope.builtin'.help_tags()
 end, { desc = 'Telescope help_tags' })
+
+-- Treesitter
+
