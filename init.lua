@@ -45,12 +45,31 @@ vim.lsp.config('lua_ls', {
 })
 vim.lsp.enable('lua_ls')
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+vim.lsp.config("rust-analyzer", {
+    capabilities = capabilities,
+    settings = {
+        ["rust-analyzer"] = {
+            completion = {
+                autoimport = {
+                    enable = true,
+                },
+            },
+        },
+    },
+})
+vim.lsp.enable('rust_analyzer')
+
 require 'blink.cmp'.setup({
     fuzzy = {
 	implementation = 'lua'
     },
     snippets = { preset = 'luasnip' },
-    keymap = { preset = 'super-tab' }
+    keymap = { preset = 'super-tab' },
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+    }
 })
 
 require('telescope').setup({
