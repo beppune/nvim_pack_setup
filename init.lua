@@ -8,6 +8,7 @@ vim.o.background = "dark"
 vim.cmd.colorscheme "duskfox"
 
 vim.o.cursorline = true
+vim.o.signcolumn = 'yes'
 
 require 'mappings'
 
@@ -50,6 +51,16 @@ require 'blink.cmp'.setup({
     },
     snippets = { preset = 'luasnip' },
     keymap = { preset = 'super-tab' }
+})
+
+require('telescope').setup({
+    defaults = {
+	mappings = {
+	    i = {
+		['<Esc>'] = require('telescope.actions').close
+	    }
+	}
+    }
 })
 
 vim.keymap.set('n', '<leader>ff', function()
