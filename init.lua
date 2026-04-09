@@ -31,8 +31,10 @@ vim.diagnostic.config({
     update_in_insert = true, -- default to false
     severity_sort = false, -- default to false
 })
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 vim.lsp.config('lua_ls', {
+    capabilities = capabilities,
     on_attach = function(_, bufnr)
 	vim.keymap.set( 'n', '<Leader>d', function()
 	    vim.diagnostic.goto_next()
@@ -45,7 +47,6 @@ vim.lsp.config('lua_ls', {
 })
 vim.lsp.enable('lua_ls')
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 vim.lsp.config("rust-analyzer", {
     capabilities = capabilities,
