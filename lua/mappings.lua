@@ -10,3 +10,6 @@ vim.keymap.set( 'n', '<Leader>v', '<C-W>v', { desc = 'myv' } )
 
 vim.keymap.set( 'n', '<Leader>w', '<C-W>w', { desc = 'myv' } )
 
+vim.keymap.set( 'n', 'grd', function ()
+	vim.diagnostic.open_float()
+end, { desc = 'Show Diagnostic float message' })
