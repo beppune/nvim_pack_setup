@@ -10,6 +10,8 @@ vim.cmd.colorscheme "duskfox"
 vim.o.cursorline = true
 vim.o.signcolumn = 'yes'
 
+require 'dev'
+
 require 'mappings'
 
 require 'lualine'.setup({
@@ -108,3 +110,15 @@ end)
 vim.keymap.set({ "n" }, "[m", function()
     require("nvim-treesitter-textobjects.move").goto_previous_start("@function_call", "textobjects")
 end)
+
+local ls = require('luasnip')
+local s = ls.snippet
+local i = ls.insert_node
+local t = ls.text_node
+
+local rr = s('rr', {
+   t('require \''), i(1), t('\''), i(2)
+})
+
+ls.add_snippets( 'lua', { rr } )
+
