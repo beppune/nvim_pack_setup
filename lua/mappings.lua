@@ -11,6 +11,9 @@ vim.keymap.set( 'n', '<Leader>q', '<C-W>q', { desc = 'myq' } )
 
 vim.keymap.set( 'n', '<Leader>w', '<C-W>w', { desc = 'myw' } )
 
+vim.keymap.set( 'n', '<Leader>t', ':tabnew<CR>', { desc = 'mytn' })
+vim.keymap.set( 'n', '<Leader>n', ':tabnext<CR>', { desc = 'mytx' })
+
 vim.keymap.set( 'n', 'grd', function ()
 	vim.diagnostic.open_float()
 end, { desc = 'Show Diagnostic float message' })
