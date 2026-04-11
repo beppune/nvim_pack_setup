@@ -33,6 +33,26 @@ vim.diagnostic.config({
     update_in_insert = true, -- default to false
     severity_sort = false, -- default to false
 })
+
+
+local blink_config = {
+    fuzzy = {
+	implementation = 'lua'
+    },
+    snippets = { preset = 'luasnip' },
+    keymap = { preset = 'super-tab' },
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+    }
+}
+
+vim.lsp.config('*', {
+    on_attach = function ()
+    	package.loaded['blink.cmp'] = nil
+	require 'blink.cmp'.setup(blink_config)
+    end
+})
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 vim.lsp.config('lua_ls', {
