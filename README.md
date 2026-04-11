@@ -19,3 +19,6 @@ function v {
 ```
 use '@args' to inject the all args as string so you can type:
 `v file1 file2...`
+
+## Blink.cmp
+Check on how to configure lsp https://cmp.saghen.dev/installation
