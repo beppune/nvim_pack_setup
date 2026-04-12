@@ -10,6 +10,15 @@ vim.cmd.colorscheme "duskfox"
 vim.o.cursorline = true
 vim.o.signcolumn = 'yes'
 
+if vim.loop.os_uname().sysname:match('Windows') then
+    vim.o.shell = '"C:\\Program Files\\Git\\bin\\bash.exe" -i -l'
+
+end
+
+if vim.version().minor >= 12 then
+    require 'vim._core.ui2'.enable({})
+end
+
 require 'dev'
 
 require 'mappings'
@@ -42,13 +51,13 @@ local blink_config = {
     snippets = { preset = 'luasnip' },
     keymap = { preset = 'super-tab' },
     sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
+	default = { "lsp", "path", "snippets", "buffer" },
     }
 }
 
 vim.lsp.config('*', {
     on_attach = function ()
-    	package.loaded['blink.cmp'] = nil
+	package.loaded['blink.cmp'] = nil
 	require 'blink.cmp'.setup(blink_config)
     end
 })
@@ -73,13 +82,13 @@ capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 vim.lsp.config("rust-analyzer", {
     capabilities = capabilities,
     settings = {
-        ["rust-analyzer"] = {
-            completion = {
-                autoimport = {
-                    enable = true,
-                },
-            },
-        },
+	["rust-analyzer"] = {
+	    completion = {
+		autoimport = {
+		    enable = true,
+		},
+	    },
+	},
     },
 })
 vim.lsp.enable('rust_analyzer')
@@ -91,7 +100,7 @@ require 'blink.cmp'.setup({
     snippets = { preset = 'luasnip' },
     keymap = { preset = 'super-tab' },
     sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
+	default = { "lsp", "path", "snippets", "buffer" },
     }
 })
 
@@ -137,8 +146,9 @@ local i = ls.insert_node
 local t = ls.text_node
 
 local rr = s('rr', {
-   t('require \''), i(1), t('\''), i(2)
+    t('require \''), i(1), t('\''), i(2)
 })
 
 ls.add_snippets( 'lua', { rr } )
+
 
